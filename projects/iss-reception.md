@@ -181,4 +181,4 @@ These are prime times to hear clear voices from orbit!
 - Some passes will be better than others (elevation dependent)
 - Voice contacts sometimes scheduled, sometimes spontaneous
 - No special license required to listen (rx-only)
-- Perfect first contact with space! 🚀
+- Perfect first contact with space!
