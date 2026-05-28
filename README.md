@@ -1,22 +1,23 @@
 # RTL-SDR Blog V4 - Complete Setup & Project Guide
 
-Welcome! Your RTL-SDR Blog V4 dongle with antennas is arriving soon. This folder contains everything you need to set up, test, and run interesting radio reception projects.
+A comprehensive guide for setting up the RTL-SDR Blog V4 software-defined radio on macOS. Includes installation instructions, frequency reference tables, antenna configurations, and ready-to-use scripts for common radio reception projects.
+
+Perfect for beginners and experienced radio enthusiasts interested in exploring the radio spectrum.
 
 ---
 
-## 📋 Quick Start Checklist
+## 📋 Quick Start
 
-**Before Antennas Arrive:**
-- [x] ✅ RTL-SDR Blog custom drivers installed
-- [x] ✅ SDR++ receiver software installed
-- [x] ✅ Supporting tools installed (rtl_433, SatDump, etc.)
-- [x] ✅ Configuration & reference guides prepared
+**Hardware Setup:**
+1. Install RTL-SDR Blog custom drivers (see `ANTENNA_SETUP_CHECKLIST.md`)
+2. Install SDR++ receiver software
+3. Assemble antenna and connect dongle
+4. Open SDR++ and tune to 100 MHz (FM radio test)
 
-**When Antennas Arrive (15 minutes):**
-1. Assemble dipole antenna base with rods
-2. Connect coax cable to dongle
-3. Plug into MacBook with USB-C adapter
-4. Open SDR++ and test FM radio (100 MHz)
+**Get Started Immediately:**
+- See `README.md` below for 5 beginner projects
+- See `ANTENNA_SETUP_CHECKLIST.md` for hardware assembly
+- See `FREQUENCY_REFERENCE.md` for frequency database
 
 ---
 
@@ -32,104 +33,93 @@ Welcome! Your RTL-SDR Blog V4 dongle with antennas is arriving soon. This folder
 
 ---
 
-## 🚀 First 5 Projects to Try
+## 🚀 5 Beginner Projects
 
-### 1️⃣ **FM Radio Reception** (5 minutes)
-Easiest first test - you'll immediately hear audio.
+### 1️⃣ **FM Radio Reception** (⭐ Easiest)
+The simplest first test - verify hardware works by listening to FM radio.
 
+**Steps:**
+1. Open SDR++
+2. Click play button (top left)
+3. Tune to **100 MHz**
+4. Enable **WFM** demodulation
+5. Click on colored peaks to tune to stations
+
+**Expected:** Colored peaks in waterfall display = active FM stations
+**Antenna:** Any length works (~50 cm optimal)
+**Troubleshooting:** No signals? Check custom RTL-SDR drivers installed
+
+### 2️⃣ **Weather Satellite Images** (⭐⭐ Intermediate)
+Decode real-time weather satellite imagery.
+
+**Requires:**
+- Antenna extended to ~1.1 m per rod (for 137 MHz band)
+- Clear sky view (window mount recommended)
+- SatDump software (download from GitHub)
+
+**Steps:**
+1. Check satellite passes: https://www.heavens-above.com
+2. Tune SDR++ to satellite frequency:
+   - NOAA-15: 137.620 MHz
+   - NOAA-18: 137.912 MHz
+   - NOAA-19: 137.100 MHz
+3. Set gain 45-50, enable WFM
+4. Click Record button when satellite rises
+5. Stop recording when satellite sets (~10 min)
+6. Open **SatDump** → Load .wav file → Decode
+7. View decoded weather image
+
+**Duration:** ~10 minutes per satellite pass
+**Result:** Cloud/weather imagery from orbit
+
+### 3️⃣ **Aircraft Radar (ADS-B)** (⭐ Easy)
+Track live aircraft positions in real-time.
+
+**Quick start:**
 ```bash
-# Open SDR++
-# 1. Click play button
-# 2. Tune to 100 MHz
-# 3. Enable WFM demodulation
-# 4. You should hear FM stations
-```
-
-**Expected**: Colored peaks in waterfall = FM stations on air
-**Troubleshooting**: If no signals, check drivers installed (see ANTENNA_SETUP_CHECKLIST.md)
-
----
-
-### 2️⃣ **Weather Satellite Images** (20 minutes)
-Decode real-time weather satellite images.
-
-**Equipment needed**:
-- Antenna extended to ~1.1m per rod (for 137 MHz)
-- Window mount or outdoor placement
-- Clear view of sky
-
-**Steps**:
-1. Go to https://www.heavens-above.com
-2. Find next NOAA-15/18/19 pass for your location
-3. Open SDR++
-4. Tune to 137.620 MHz (NOAA-15) or 137.912 MHz (NOAA-18)
-5. Set gain to 45-50
-6. Click Record when satellite rises above horizon
-7. Stop when it sets
-8. Open **SatDump** → Load recorded file → Select NOAA decoder
-9. View decoded weather image!
-
-**Expected**: Weather clouds visible in decoded image
-**Duration**: ~10 minutes per pass
-
----
-
-### 3️⃣ **Aircraft Radar (ADS-B)** (5 minutes)
-See live aircraft positions on a map.
-
-```bash
-# Make script executable
-chmod +x aircraft_radar_setup.sh
-
-# Launch aircraft tracker
 ./aircraft_radar_setup.sh
-
-# Open browser to: http://localhost:8080
+# Opens live map at http://localhost:8080
 ```
 
-**Expected**: 
-- Live aircraft appearing on map
-- Click aircraft for more info (flight number, altitude, speed)
-- 100-300 km range depending on antenna height
+**Features:**
+- Real-time aircraft positions
+- Altitude, speed, flight number
+- 100-300 km range (depends on antenna location)
 
-**Frequency**: 1090 MHz (ADS-B)
-**Antenna**: Any length works, but 30-50 cm optimal
+**Frequency:** 1090 MHz (Mode S ADS-B)
+**Antenna:** Any length works (~15-50 cm)
 
----
-
-### 4️⃣ **Wireless Sensors & IoT** (5 minutes)
-Decode temperature sensors, tire sensors, smart devices.
+### 4️⃣ **Wireless Sensors** (⭐ Easy)
+Detect home weather stations, tire sensors, and IoT devices.
 
 ```bash
-# Detect all 433 MHz devices broadcasting
 rtl_433 -f 433.92M
-
-# Example output:
-# Weather station: Temperature 22°C, Humidity 65%
-# Tire sensor: Pressure 2.1 bar, Battery OK
 ```
 
-**Frequency**: 433.92 MHz
-**Antenna**: Can be short (~17cm per rod)
-**Detects**: Weather stations, TPMS sensors, smart home devices, door bells
+**Detects:**
+- Weather station sensors (temperature, humidity)
+- Vehicle tire pressure monitors (TPMS)
+- Smart home devices
+- Wireless doorbells
 
----
+**Frequency:** 433.92 MHz
+**Antenna:** Short (~17 cm per rod)
 
-### 5️⃣ **ISS Packet Radio & SSTV** (live event)
-Receive live transmissions from the International Space Station.
+### 5️⃣ **ISS Reception** (⭐⭐ Intermediate)
+Receive transmissions from the International Space Station.
 
-**Setup**:
-1. Go to https://www.heavens-above.com
-2. Find next ISS pass
-3. Extend antenna fully (~1.1m per rod)
-4. Tune SDR++ to 145.800 MHz
-5. Enable NFM demodulation
-6. Record during pass
-7. Use **Direwolf** to decode packet radio
-   - Or decode SSTV images (slow-scan TV)
+**Requires:**
+- ISS pass prediction (https://www.heavens-above.com)
+- Extended antenna (~1.1 m per rod)
+- Clear view of sky during pass window
 
-**Expected**: Live voice from ISS + packet radio digipeater
-**Only works**: When ISS passes overhead (check Heavens-Above for times)
+**What to receive:**
+- Voice transmissions (145.800 MHz)
+- APRS packet radio (145.825 MHz)
+- SSTV slow-scan images (145.80 MHz)
+
+**Tools:** Direwolf (APRS decoder), SatDump (SSTV decoder)
+**Duration:** Only works during ISS passes (~10 min windows)
 
 ---
 
@@ -219,45 +209,45 @@ You'll need: **USB-A female to USB-C male adapter** (£4-6, Anker/Baseus brand)
 
 ---
 
-## 🎯 Next Steps
+## 🎯 Getting Started
 
-1. **Read**: ANTENNA_SETUP_CHECKLIST.md (assembly guide)
-2. **Read**: FREQUENCY_REFERENCE.md (settings for each band)
-3. **When antennas arrive**: Follow physical assembly instructions
-4. **Test**: Start with FM radio (easiest first project)
-5. **Record**: Try satellite or ISS reception
-6. **Explore**: Visit RTL-SDR.com for more project ideas
-
----
-
-## 📝 Project Log
-
-Use this space to track your projects:
-
-```
-Project: FM Radio Reception
-Date: [Your date]
-Frequency: 100.0 MHz (BBC Radio 1)
-Result: ✅ Working perfectly
-Notes: Good signal strength, clear audio
-
-Project: Weather Satellite (NOAA-18)
-Date: [Your date]
-Frequency: 137.912 MHz
-Result: ✅ Decoded image successfully
-Notes: Extended rods to 1.1m, mounted at window
-
-Project: Aircraft Radar
-Date: [Your date]
-Frequency: 1090 MHz (ADS-B)
-Result: ✅ Tracking aircraft 200km+ away
-Notes: Antenna extension affects range significantly
-```
+1. **Setup:** Follow `ANTENNA_SETUP_CHECKLIST.md` for hardware and driver installation
+2. **Reference:** Use `FREQUENCY_REFERENCE.md` for frequency database and antenna lengths
+3. **First Test:** Start with FM radio reception (easiest, immediate results)
+4. **Next:** Try aircraft radar or wireless sensors
+5. **Advanced:** Record satellite passes and decode images
+6. **Explore:** Visit [RTL-SDR Blog](https://www.rtl-sdr.com) for more projects
 
 ---
 
-**Equipment Status**: ✅ Pre-installed & Ready
-**Next Action**: Assemble antenna when it arrives
-**Support**: See RTL-SDR blog forum if you get stuck
+## 📚 File Guide
 
-Good luck with your radio reception projects! 📡
+- **`README.md`** (this file) — Overview and 5 starter projects
+- **`ANTENNA_SETUP_CHECKLIST.md`** — Hardware assembly and driver installation
+- **`FREQUENCY_REFERENCE.md`** — Complete frequency database with optimal settings
+- **`PREPARATION_SUMMARY.md`** — Setup checklist and troubleshooting
+- **`aircraft_radar_setup.sh`** — One-command ADS-B aircraft tracker
+- **`satellite_tracker.py`** — Predict satellite passes (requires N2YO API key)
+
+---
+
+## ⚠️ Important Notes
+
+- **Custom Drivers Required**: V4 requires RTL-SDR Blog custom drivers, not stock macOS drivers
+- **IF AGC**: Must be disabled in SDR++ settings for proper V4 operation
+- **Antenna Length**: Varies by frequency (see FREQUENCY_REFERENCE.md)
+- **USB-C Adapter**: Needed for MacBook connection (USB-A dongle to USB-C)
+
+---
+
+## 🔗 Resources
+
+- **[RTL-SDR Blog](https://www.rtl-sdr.com)** — Official guides and projects
+- **[Heavens-Above](https://www.heavens-above.com)** — Satellite pass predictions
+- **[RadioReference](https://radioreference.com)** — Frequency database
+- **[SDR++](https://github.com/AlexandreRouma/SDRPlusPlus)** — Main receiver software
+- **[SatDump](https://github.com/SatDump/SatDump)** — Satellite image decoder
+
+---
+
+**Happy exploring! 📡**
