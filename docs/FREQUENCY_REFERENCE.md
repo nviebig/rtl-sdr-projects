@@ -1,5 +1,15 @@
 # RTL-SDR Frequency Reference Guide
 
+## UK Frequency Spectrum Overview
+
+![UK Frequency Spectrum Clean](../img/uk_spectrum_clean.png)
+
+![UK Frequency Reference](../img/uk_frequency_reference.png)
+
+This guide provides the frequency allocations for the UK according to Ofcom's UK Frequency Allocation Table (UKFAT). The visualizations above show how the radio spectrum is organized, with logarithmic scaling to accommodate the wide frequency range from VLF to microwave bands.
+
+---
+
 ## Common Frequencies (MHz)
 
 ### FM Radio & Audio

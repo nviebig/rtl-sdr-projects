@@ -29,8 +29,13 @@ Perfect for beginners and experienced radio enthusiasts interested in exploring 
 │   ├── wireless-sensors.md           (IoT device detection)
 │   └── iss-reception.md              (ISS voice & data)
 │
-└── hardware/                          (Hardware Reference)
-    └── antenna-configurations.md     (Antenna optimization guide)
+├── hardware/                          (Hardware Reference)
+│   └── antenna-configurations.md     (Antenna optimization guide)
+│
+└── img/                               (Visualizations & diagrams)
+    ├── uk_spectrum_clean.png         (UK frequency spectrum visualization)
+    ├── uk_frequency_reference.png    (UK frequency bands reference table)
+    └── uk_spectrum_viz.py            (Script to generate plots)
 ```
 
 ---
@@ -127,6 +132,20 @@ python3 scripts/satellite_tracker.py
 | **Satellites** | 137-138 MHz | Weather images |
 | **ISS** | 145.800 MHz | Voice transmissions |
 | **IoT/Sensors** | 433.92 MHz | Detect home devices |
+
+---
+
+## UK Frequency Spectrum (Ofcom UKFAT)
+
+See the complete UK radio frequency allocations below. These visualizations show where your RTL-SDR can listen across the spectrum.
+
+**Frequency Bands Overview:**
+![UK Frequency Spectrum](img/uk_spectrum_clean.png)
+
+**Quick Reference Table:**
+![UK Frequency Reference](img/uk_frequency_reference.png)
+
+The spectrum covers everything from VLF maritime beacons (190 kHz) through FM radio, aviation bands, mobile networks, and up to satellite downlinks. Your RTL-SDR can receive most bands below 2 GHz, with strong performance in the VHF/UHF ranges.
 
 ---
 
