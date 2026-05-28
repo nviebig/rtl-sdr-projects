@@ -2,13 +2,11 @@
 
 ## UK Frequency Spectrum Overview
 
-![RTL-SDR Bands](../img/uk_spectrum_clean.png)
+![UK Frequency Spectrum](../img/uk_spectrum_clean.png)
 
 ![Frequency Reference Table](../img/frequency_table.png)
 
-![RTL-SDR Common Bands](../img/rtl_sdr_bands.png)
-
-This guide provides the frequency allocations for the UK according to Ofcom's UK Frequency Allocation Table (UKFAT). The charts above show which bands are suitable for RTL-SDR reception and common frequencies you can explore.
+This guide provides the frequency allocations for the UK according to Ofcom's UK Frequency Allocation Table (UKFAT). The spectrum shows which bands are suitable for RTL-SDR reception. Colors match between the spectrum and table for easy reference.
 
 ---
 
