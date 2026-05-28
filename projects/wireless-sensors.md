@@ -1,6 +1,6 @@
 # Wireless Sensor Decoding
 
-**Difficulty:** ⭐ Easy | **Time:** 5 minutes
+**Difficulty:** Easy | **Time:** 5 minutes
 
 ## Overview
 Decode wireless sensor broadcasts from devices around you. Detect weather stations, tire pressure monitors (TPMS), smart home devices, doorbells, and more.

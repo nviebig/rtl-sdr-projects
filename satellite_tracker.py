@@ -63,22 +63,22 @@ def get_satellite_passes(norad_id, days_ahead=5):
         if response.status_code == 200:
             return response.json()
         else:
-            print(f"⚠️  API Error {response.status_code}")
+            print(f"API Error {response.status_code}")
             return None
     except Exception as e:
-        print(f"❌ Error fetching passes: {e}")
+        print(f"Error fetching passes: {e}")
         return None
 
 def print_passes(satellite_name, sat_info):
     """Pretty print upcoming passes"""
-    print(f"\n🛰️  {satellite_name}")
+    print(f"\n{satellite_name}")
     print(f"   Frequency: {sat_info['frequency']} MHz | Mode: {sat_info['mode']}")
     print(f"   NORAD ID: {sat_info['norad_id']}")
 
     passes = get_satellite_passes(sat_info['norad_id'])
 
     if not passes or 'passes' not in passes:
-        print("   ⚠️  No passes predicted or API unavailable")
+        print("   No passes predicted or API unavailable")
         return
 
     if not passes['passes']:
@@ -100,7 +100,7 @@ def print_passes(satellite_name, sat_info):
 
         # Alert if pass is within next hour
         if 0 < time_until < 1:
-            print(f"     🚀 PASS STARTING IN {int(time_until*60)} MINUTES!")
+            print(f"     PASS STARTING IN {int(time_until*60)} MINUTES!")
 
 def main():
     print("=" * 60)

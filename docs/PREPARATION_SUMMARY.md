@@ -1,11 +1,11 @@
-# RTL-SDR V4 Antenna Arrival - Preparation Summary ✅
+# RTL-SDR V4 Antenna Arrival - Preparation Summary
 
 **Prepared on:** 2026-05-28  
-**Status:** ✅ **100% Ready for antenna arrival**
+**Status:** 100% Ready for antenna arrival
 
 ---
 
-## 📦 What You're Getting
+## What You're Getting
 
 Your RTL-SDR Blog V4 package includes:
 - RTL-SDR Blog V4 Dongle (RTL2832U + R828D Tuner)
@@ -14,31 +14,31 @@ Your RTL-SDR Blog V4 package includes:
 - 3-metre coax extension cable (SMA connectors)
 - Mini flexible tripod
 - Suction cup window mount
-- **⚠️ Still need to buy:** USB-A female to USB-C male adapter (~£4-6)
+- **Still need to buy:** USB-A female to USB-C male adapter (~£4-6)
 
 ---
 
-## ✅ Software Installation Complete
+## Software Installation Complete
 
 ### Drivers Installed
-- ✅ RTL-SDR Blog custom drivers (v4 specific)
-- ✅ Homebrew package manager
-- ✅ Supporting libraries (cmake, libusb, pkgconfig)
+- RTL-SDR Blog custom drivers (v4 specific)
+- Homebrew package manager
+- Supporting libraries (cmake, libusb, pkgconfig)
 
 ### Applications Installed
-- ✅ SDR++ (primary receiver software)
-- ✅ rtl_433 (wireless sensor decoder)
-- ✅ GQRX (alternative receiver)
-- ✅ Supporting tools
+- SDR++ (primary receiver software)
+- rtl_433 (wireless sensor decoder)
+- GQRX (alternative receiver)
+- Supporting tools
 
 ### Configuration Complete
-- ✅ Custom drivers configured in /usr/local/lib
-- ✅ macOS driver blacklist configured
-- ✅ All permissions set correctly
+- Custom drivers configured in /usr/local/lib
+- macOS driver blacklist configured
+- All permissions set correctly
 
 ---
 
-## 📚 Documentation Prepared
+## Documentation Prepared
 
 ### 1. **README.md** (START HERE)
    - Overview of all files
@@ -69,16 +69,16 @@ Your RTL-SDR Blog V4 package includes:
 
 ---
 
-## 🚀 Executable Scripts Ready to Use
+## Executable Scripts Ready to Use
 
-### **aircraft_radar_setup.sh** ✅
+### **aircraft_radar_setup.sh**
 One-command aircraft tracking system:
 ```bash
 ./aircraft_radar_setup.sh
 # Opens live aircraft map at http://localhost:8080
 ```
 
-### **satellite_tracker.py** ✅
+### **satellite_tracker.py**
 Predicts when satellites pass overhead:
 ```bash
 python3 satellite_tracker.py
@@ -88,21 +88,21 @@ python3 satellite_tracker.py
 
 ---
 
-## 🎯 5 First Projects Ready to Try
+## 5 First Projects Ready to Try
 
 | # | Project | Complexity | Time | Antenna Length |
 |---|---------|-----------|------|---|
-| 1 | FM Radio Reception | ⭐ Easy | 5 min | Any (~50cm) |
-| 2 | Weather Satellites | ⭐⭐ Medium | 20 min | ~110cm (full) |
-| 3 | Aircraft Radar (ADS-B) | ⭐ Easy | 5 min | ~15cm |
-| 4 | Wireless Sensors (433 MHz) | ⭐ Easy | 5 min | ~17cm |
-| 5 | ISS Reception | ⭐⭐ Medium | Live event | ~110cm (full) |
+| 1 | FM Radio Reception | Easy | 5 min | Any (~50cm) |
+| 2 | Weather Satellites | Medium | 20 min | ~110cm (full) |
+| 3 | Aircraft Radar (ADS-B) | Easy | 5 min | ~15cm |
+| 4 | Wireless Sensors (433 MHz) | Easy | 5 min | ~17cm |
+| 5 | ISS Reception | Medium | Live event | ~110cm (full) |
 
 **Recommended order:** Try #1 (FM) → #3 (Aircraft) → #4 (Sensors) → #2 (Satellites) → #5 (ISS)
 
 ---
 
-## ⏱️ Timeline When Antennas Arrive
+## Timeline When Antennas Arrive
 
 ### **0-15 minutes: Physical Assembly**
 1. Unbox all components
@@ -125,7 +125,7 @@ python3 satellite_tracker.py
 
 ---
 
-## 📋 Before Running First Project
+## Before Running First Project
 
 **You will need:**
 - [ ] USB-A to USB-C adapter (the ONLY external purchase!)
@@ -145,7 +145,7 @@ which rtl_433             # Should show /opt/homebrew/bin/rtl_433
 
 ---
 
-## 🔧 Troubleshooting Quick Reference
+## Troubleshooting Quick Reference
 
 | Problem | Solution | Reference |
 |---------|----------|-----------|
@@ -157,7 +157,7 @@ which rtl_433             # Should show /opt/homebrew/bin/rtl_433
 
 ---
 
-## 📡 Frequencies You'll Use Most
+## Frequencies You'll Use Most
 
 | What | Frequency | Why |
 |------|-----------|-----|
@@ -169,7 +169,7 @@ which rtl_433             # Should show /opt/homebrew/bin/rtl_433
 
 ---
 
-## 🎓 Learning Path Suggested
+## Learning Path Suggested
 
 **Day 1:**
 - [ ] Read README.md (overview)
@@ -192,15 +192,15 @@ which rtl_433             # Should show /opt/homebrew/bin/rtl_433
 
 ---
 
-## ✨ What's Already Installed
+## What's Already Installed
 
 ### Core Tools
 ```
-RTL-SDR Blog drivers ..................... ✅
-SDR++ (main software) ..................... ✅
-rtl_433 (sensor decoder) .................. ✅
-GQRX (alternative software) ............... ✅
-Supporting libraries ...................... ✅
+RTL-SDR Blog drivers ..................... Installed
+SDR++ (main software) ..................... Installed
+rtl_433 (sensor decoder) .................. Installed
+GQRX (alternative software) ............... Installed
+Supporting libraries ...................... Installed
 ```
 
 ### External Tools (install when needed)
@@ -212,7 +212,7 @@ dump1090-fa (aircraft radar) .............. See aircraft_radar_setup.sh
 
 ---
 
-## 📍 Quick File Guide
+## Quick File Guide
 
 **When antennas arrive, open in this order:**
 1. `README.md` — Overview + 5 beginner projects
@@ -223,35 +223,35 @@ dump1090-fa (aircraft radar) .............. See aircraft_radar_setup.sh
 
 ---
 
-## 🎯 Success Indicators
+## Success Indicators
 
 **You'll know everything is working when:**
-1. ✅ FM radio at 100 MHz shows colored peaks in SDR++
-2. ✅ Aircraft appear on the map when running aircraft_radar_setup.sh
-3. ✅ rtl_433 detects wireless devices in your home
-4. ✅ SatDump successfully decodes satellite weather images
-5. ✅ ISS packet radio appears during live passes
+1. FM radio at 100 MHz shows colored peaks in SDR++
+2. Aircraft appear on the map when running aircraft_radar_setup.sh
+3. rtl_433 detects wireless devices in your home
+4. SatDump successfully decodes satellite weather images
+5. ISS packet radio appears during live passes
 
 ---
 
-## 🚨 Important Reminders
+## Important Reminders
 
-⚠️ **USB-C Adapter Required**
+**USB-C Adapter Required**
 - Your MacBook only has USB-C ports
 - The dongle is USB-A
 - You MUST buy USB-A female to USB-C male adapter
 - ~£4-6, Anker or Baseus brand recommended
 
-⚠️ **Custom Drivers Essential**
+**Custom Drivers Essential**
 - V4 requires RTL-SDR Blog custom drivers (already installed)
 - Standard macOS drivers will NOT work
 - If you get "no signals", check drivers installed
 
-⚠️ **IF AGC Must Be Disabled**
+**IF AGC Must Be Disabled**
 - In SDR++ settings, find "IF AGC" and DISABLE it
 - This is critical for V4 dongle operation
 
-⚠️ **Antenna Length Matters**
+**Antenna Length Matters**
 - Different frequencies need different lengths
 - See FREQUENCY_REFERENCE.md for optimal lengths
 - Short rods (~50cm) work for FM
@@ -259,7 +259,7 @@ dump1090-fa (aircraft radar) .............. See aircraft_radar_setup.sh
 
 ---
 
-## 📞 Support Resources
+## Support Resources
 
 - **Official RTL-SDR Blog**: https://www.rtl-sdr.com (guides, projects)
 - **Satellite Predictions**: https://www.heavens-above.com
@@ -269,7 +269,7 @@ dump1090-fa (aircraft radar) .............. See aircraft_radar_setup.sh
 
 ---
 
-## ✅ Preparation Checklist - Complete!
+## Preparation Checklist - Complete!
 
 - [x] Read RTL-SDR V4 Field Manual
 - [x] Installed RTL-SDR Blog custom drivers
@@ -283,16 +283,16 @@ dump1090-fa (aircraft radar) .............. See aircraft_radar_setup.sh
 
 ---
 
-**🎉 Your RTL-SDR setup is 100% ready for antenna arrival!**
+**Your RTL-SDR setup is 100% ready for antenna arrival!**
 
 When the antennas arrive:
 1. Assemble antenna (15 minutes)
 2. Test FM radio (5 minutes)
 3. Start your first project
 
-**Have fun exploring the radio spectrum!** 📡
+**Have fun exploring the radio spectrum!**
 
 ---
 
 *Preparation completed: 2026-05-28 21:33 GMT+1*
-*Ready for antenna arrival: YES ✅*
+*Ready for antenna arrival: YES*

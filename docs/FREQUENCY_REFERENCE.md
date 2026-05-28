@@ -1,6 +1,6 @@
 # RTL-SDR Frequency Reference Guide
 
-## 🌍 Common Frequencies (MHz)
+## Common Frequencies (MHz)
 
 ### FM Radio & Audio
 | Service | Frequency (MHz) | Bandwidth | Mode |
@@ -63,7 +63,7 @@
 
 ---
 
-## 🎯 Optimal Antenna Configuration
+## Optimal Antenna Configuration
 
 ### Dipole Rod Lengths by Frequency
 
@@ -78,7 +78,7 @@
 
 ---
 
-## 📊 Demodulation Modes
+## Demodulation Modes
 
 | Mode | Use Case | Bandwidth |
 |---|---|---|
@@ -91,7 +91,7 @@
 
 ---
 
-## 🔧 SDR++ Quick Settings
+## SDR++ Quick Settings
 
 ### For Aircraft Tracking (ADS-B)
 - Frequency: 1090 MHz
@@ -128,7 +128,7 @@
 
 ---
 
-## 📡 Recording & Post-Processing
+## Recording & Post-Processing
 
 ### Record IQ Data (SDR++)
 1. Click "Record" button (tape icon)
@@ -160,7 +160,7 @@ rtl_433 -f 433.92M
 
 ---
 
-## ⚠️ Important Notes
+## Important Notes
 
 1. **Antenna matching**: Different frequencies need different antenna lengths
 2. **Gain settings**: Too much gain = noise; too little = weak signals

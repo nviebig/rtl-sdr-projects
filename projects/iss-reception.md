@@ -1,6 +1,6 @@
 # ISS Reception (Voice, APRS, SSTV)
 
-**Difficulty:** ⭐⭐ Intermediate | **Time:** 10 minutes per pass | **Special Event**
+**Difficulty:** Intermediate | **Time:** 10 minutes per pass | **Special Event**
 
 ## Overview
 Receive live transmissions from the International Space Station when it passes overhead. Hear astronaut voices, decode packet radio (APRS), or capture slow-scan television (SSTV) images.

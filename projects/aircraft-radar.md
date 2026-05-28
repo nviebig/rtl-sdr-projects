@@ -1,6 +1,6 @@
 # Aircraft Radar (ADS-B)
 
-**Difficulty:** ⭐ Easy | **Time:** 5 minutes
+**Difficulty:** Easy | **Time:** 5 minutes
 
 ## Overview
 Track live aircraft in real-time using ADS-B (Automatic Dependent Surveillance-Broadcast) signals. See aircraft positions, altitude, speed, and flight numbers on a live map.

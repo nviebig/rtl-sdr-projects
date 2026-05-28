@@ -23,7 +23,7 @@ Perfect for beginners and experienced radio enthusiasts interested in exploring 
 │   └── PREPARATION_SUMMARY.md        (Pre-setup checklist)
 │
 ├── projects/                          (Detailed Project Guides)
-│   ├── fm-radio.md                   (⭐ Start here - easiest)
+│   ├── fm-radio.md                   (Start here - easiest)
 │   ├── aircraft-radar.md             (Live aircraft tracking)
 │   ├── weather-satellites.md         (Weather image decoding)
 │   ├── wireless-sensors.md           (IoT device detection)

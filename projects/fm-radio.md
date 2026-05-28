@@ -1,6 +1,6 @@
 # FM Radio Reception
 
-**Difficulty:** ⭐ Easy | **Time:** 5 minutes | **Recommended First Project**
+**Difficulty:** Easy | **Time:** 5 minutes | **Recommended First Project**
 
 ## Overview
 The simplest RTL-SDR project. Verify your hardware works by listening to FM radio broadcasts.

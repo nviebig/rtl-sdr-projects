@@ -1,6 +1,6 @@
 # Weather Satellite Image Decoding
 
-**Difficulty:** ⭐⭐ Intermediate | **Time:** 20+ minutes per pass
+**Difficulty:** Intermediate | **Time:** 20+ minutes per pass
 
 ## Overview
 Receive and decode real-time weather satellite imagery. Capture cloud patterns, infrared data, and weather information from polar-orbiting satellites passing overhead.
@@ -9,10 +9,10 @@ Receive and decode real-time weather satellite imagery. Capture cloud patterns, 
 
 | Satellite | Frequency | Status | Inclination |
 |-----------|-----------|--------|------------|
-| **NOAA-15** | 137.620 MHz | Active ✅ | 98.6° |
-| **NOAA-18** | 137.912 MHz | Active ✅ | 99.0° |
-| **NOAA-19** | 137.100 MHz | Active ✅ | 99.2° |
-| **Meteor M2-4** | 137.100 MHz | Active ✅ | 98.6° |
+| **NOAA-15** | 137.620 MHz | Active | 98.6° |
+| **NOAA-18** | 137.912 MHz | Active | 99.0° |
+| **NOAA-19** | 137.100 MHz | Active | 99.2° |
+| **Meteor M2-4** | 137.100 MHz | Active | 98.6° |
 
 **Note:** NOAA-17 was decommissioned in 2022. Current operational NOAA satellites are 15, 18, and 19.
 

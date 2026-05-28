@@ -1,6 +1,6 @@
 # RTL-SDR V4 Antenna Arrival - Complete Setup Checklist
 
-## 📦 Before the Antennas Arrive
+## Before the Antennas Arrive
 
 ### Hardware Verification Checklist
 - [ ] RTL-SDR Blog V4 Dongle
@@ -9,7 +9,7 @@
 - [ ] 3-metre coax extension cable (SMA male to SMA female)
 - [ ] Mini flexible tripod (gorilla pod style)
 - [ ] Suction cup window mount
-- [ ] **⚠️ BUY: USB-A female to USB-C male adapter** (£4-6, Anker/Baseus recommended)
+- [ ] **BUY: USB-A female to USB-C male adapter** (£4-6, Anker/Baseus recommended)
 
 ### Software Installation Status
 - [ ] Homebrew installed
@@ -28,7 +28,7 @@
 
 ---
 
-## 🔧 Physical Assembly (When Antennas Arrive)
+## Physical Assembly (When Antennas Arrive)
 
 ### Step 1: Assemble the Dipole Antenna
 1. Take the dipole base with SMA connector
@@ -54,7 +54,7 @@
 
 ---
 
-## ✅ First Signal Check
+## First Signal Check
 
 1. Open **SDR++** from Applications folder
 2. Click the **play button** (top left) to start receiver
@@ -72,7 +72,7 @@
 
 ---
 
-## 🛰️ Common Projects to Try
+## Common Projects to Try
 
 ### 1. Aircraft Radar (ADS-B)
 ```bash
@@ -117,7 +117,7 @@ Decode weather stations, TPMS tire sensors, smart home devices
 
 ---
 
-## 📚 Quick Reference Links
+## Quick Reference Links
 
 - **SDR++**: https://github.com/AlexandreRouma/SDRPlusPlus (nightly builds)
 - **SatDump**: https://github.com/SatDump/SatDump
@@ -137,5 +137,5 @@ Decode weather stations, TPMS tire sensors, smart home devices
 
 ---
 
-**Status**: Equipment ordered and software pre-installed ✅
+**Status**: Equipment ordered and software pre-installed
 **Next steps**: When antennas arrive, follow "Physical Assembly" section above.

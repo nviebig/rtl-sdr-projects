@@ -4,31 +4,31 @@
 # Decodes aircraft ADS-B signals and displays live radar map
 # Open browser to http://localhost:8080 to view live aircraft
 
-echo "🛩️  RTL-SDR Aircraft Radar Setup"
+echo "RTL-SDR Aircraft Radar Setup"
 echo "=================================="
 
 # Check if dump1090-fa is installed
 if ! command -v dump1090-fa &> /dev/null; then
-    echo "❌ dump1090-fa not found. Installing..."
+    echo "dump1090-fa not found. Installing..."
     brew install dump1090-mutability || brew install dump1090-fa
 fi
 
 if ! command -v dump1090-fa &> /dev/null; then
-    echo "⚠️  dump1090-fa installation may have failed."
+    echo "dump1090-fa installation may have failed."
     echo "   Try: brew search dump1090"
     exit 1
 fi
 
-echo "✅ dump1090-fa found"
+echo "dump1090-fa found"
 echo ""
 echo "Starting ADS-B aircraft tracking..."
 echo "Frequency: 1090 MHz"
 echo "Mode: ADS-B (1090 MHz ES)"
 echo ""
-echo "📺 Open your browser: http://localhost:8080"
+echo "Open your browser: http://localhost:8080"
 echo "   You should see a map with live aircraft positions"
 echo ""
-echo "🎯 Tuning Tips:"
+echo "Tuning Tips:"
 echo "   - Antenna: Fully extended telescopic rods (~50cm each)"
 echo "   - Gain: 45-50 (adjust if too much noise)"
 echo "   - Location: Higher elevation = more range"
