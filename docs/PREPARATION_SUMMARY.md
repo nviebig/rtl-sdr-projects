@@ -71,9 +71,12 @@ Your RTL-SDR Blog V4 package includes:
 
 ## Executable Scripts Ready to Use
 
+Located in `scripts/` folder:
+
 ### **aircraft_radar_setup.sh**
 One-command aircraft tracking system:
 ```bash
+cd scripts/
 ./aircraft_radar_setup.sh
 # Opens live aircraft map at http://localhost:8080
 ```
@@ -81,6 +84,7 @@ One-command aircraft tracking system:
 ### **satellite_tracker.py**
 Predicts when satellites pass overhead:
 ```bash
+cd scripts/
 python3 satellite_tracker.py
 # Shows NOAA/ISS/Meteor satellite passes for your location
 ```

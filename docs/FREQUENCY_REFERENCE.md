@@ -10,6 +10,18 @@ This guide provides the frequency allocations for the UK according to Ofcom's UK
 
 ---
 
+## Ready-to-Use Scripts by Frequency
+
+| Frequency | Project | Script | Purpose |
+|-----------|---------|--------|---------|
+| 88-108 MHz | FM Radio | See [fm-radio.md](../projects/fm-radio.md) | Listen to FM broadcasts |
+| 137-138 MHz | Weather Satellites | [`scripts/satellite_tracker.py`](../scripts/satellite_tracker.py) | Predict satellite passes |
+| 145.800 MHz | ISS Reception | See [iss-reception.md](../projects/iss-reception.md) | Receive astronaut voice |
+| 433.92 MHz | Wireless Sensors | See [wireless-sensors.md](../projects/wireless-sensors.md) | Decode IoT devices |
+| 1090 MHz | Aircraft Radar (ADS-B) | [`scripts/aircraft_radar_setup.sh`](../scripts/aircraft_radar_setup.sh) | Track live aircraft |
+
+---
+
 ## Common Frequencies (MHz)
 
 ### FM Radio & Audio

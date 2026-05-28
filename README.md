@@ -90,20 +90,35 @@ Start with **FM Radio** (easiest), then choose your next project:
 
 ---
 
-## Scripts
+## Ready-to-Use Scripts
 
 ### Aircraft Radar (ADS-B)
+Live aircraft tracking on a web map. See planes in real-time with altitude, speed, and flight data.
+
 ```bash
-./scripts/aircraft_radar_setup.sh
+cd scripts/
+./aircraft_radar_setup.sh
 # Opens live aircraft map at http://localhost:8080
 ```
 
+**Requirements:** dump1090-fa (auto-installed)  
+**Antenna:** 15-50 cm length  
+**Frequency:** 1090 MHz
+
+---
+
 ### Satellite Pass Predictor
+Know when NOAA weather satellites and ISS pass overhead. Get alerts for satellite passes at your location.
+
 ```bash
-python3 scripts/satellite_tracker.py
-# Shows when NOAA/ISS satellites pass overhead
-# (Requires N2YO API key - see script for setup)
+cd scripts/
+python3 satellite_tracker.py
+# Shows upcoming NOAA/ISS/Meteor satellite passes
 ```
+
+**Setup:** Get free N2YO API key from https://www.n2yo.com/api/  
+**Edit:** Update LATITUDE/LONGITUDE in the script  
+**Frequency:** 137-138 MHz (NOAA), 145.800 MHz (ISS)
 
 ---
 
