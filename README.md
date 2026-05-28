@@ -6,7 +6,7 @@ Perfect for beginners and experienced radio enthusiasts interested in exploring 
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── README.md                          (this file)
@@ -35,7 +35,7 @@ Perfect for beginners and experienced radio enthusiasts interested in exploring 
 
 ---
 
-## 🚀 Quick Start (5 minutes)
+## Quick Start (5 minutes)
 
 ### 1. Install Software
 See `docs/ANTENNA_SETUP.md` for:
@@ -58,23 +58,23 @@ See `docs/ANTENNA_SETUP.md` for:
 
 ---
 
-## 🎯 5 Beginner Projects
+## 5 Beginner Projects
 
 Start with **FM Radio** (easiest), then choose your next project:
 
 | Project | Difficulty | Time | What You'll Do |
 |---------|-----------|------|----------------|
-| [**FM Radio**](projects/fm-radio.md) | ⭐ | 5 min | Listen to FM stations |
-| [**Aircraft Radar**](projects/aircraft-radar.md) | ⭐ | 5 min | Track live aircraft |
-| [**Wireless Sensors**](projects/wireless-sensors.md) | ⭐ | 5 min | Detect IoT devices |
-| [**Weather Satellites**](projects/weather-satellites.md) | ⭐⭐ | 20 min | Decode satellite images |
-| [**ISS Reception**](projects/iss-reception.md) | ⭐⭐ | 10 min | Hear astronauts! |
+| [**FM Radio**](projects/fm-radio.md) | Beginner | 5 min | Listen to FM stations |
+| [**Aircraft Radar**](projects/aircraft-radar.md) | Beginner | 5 min | Track live aircraft |
+| [**Wireless Sensors**](projects/wireless-sensors.md) | Beginner | 5 min | Detect IoT devices |
+| [**Weather Satellites**](projects/weather-satellites.md) | Intermediate | 20 min | Decode satellite images |
+| [**ISS Reception**](projects/iss-reception.md) | Intermediate | 10 min | Hear astronauts |
 
 **Click project name above to see detailed guide.**
 
 ---
 
-## 📚 Documentation Quick Links
+## Documentation Quick Links
 
 | Document | Purpose |
 |----------|---------|
@@ -85,7 +85,7 @@ Start with **FM Radio** (easiest), then choose your next project:
 
 ---
 
-## 🛠️ Scripts
+## Scripts
 
 ### Aircraft Radar (ADS-B)
 ```bash
@@ -102,22 +102,22 @@ python3 scripts/satellite_tracker.py
 
 ---
 
-## 🔑 Key Information
+## Key Information
 
 ### Active Satellites (2024+)
-- **NOAA-15** (137.620 MHz) - Weather ✅
-- **NOAA-18** (137.912 MHz) - Weather ✅
-- **NOAA-19** (137.100 MHz) - Weather ✅
-- **Meteor M2-4** (137.100 MHz) - Weather ✅
-- **ISS** (145.800 MHz) - Voice/SSTV ✅
+- NOAA-15 (137.620 MHz) - Weather
+- NOAA-18 (137.912 MHz) - Weather
+- NOAA-19 (137.100 MHz) - Weather
+- Meteor M2-4 (137.100 MHz) - Weather
+- ISS (145.800 MHz) - Voice/SSTV
 
 *Note: NOAA-17 was decommissioned in 2022. Current operational NOAA satellites are 15, 18, and 19.*
 
 ### Required Hardware
-- ✅ RTL-SDR Blog V4 Dongle
-- ✅ Antenna rods (included)
-- ✅ Coax cable (included)
-- ⚠️ USB-A to USB-C adapter (buy separately, £4-6)
+- RTL-SDR Blog V4 Dongle
+- Antenna rods (included)
+- Coax cable (included)
+- USB adapter (if required for your device)
 
 ### Common Frequencies
 | Band | Frequency | Project |
@@ -130,7 +130,7 @@ python3 scripts/satellite_tracker.py
 
 ---
 
-## ⚠️ Important Setup Notes
+## Important Setup Notes
 
 **Custom Drivers Required**
 - V4 needs RTL-SDR Blog custom drivers (not stock macOS)
@@ -147,18 +147,18 @@ python3 scripts/satellite_tracker.py
 
 ---
 
-## 🔗 External Resources
+## External Resources
 
-- **[RTL-SDR Blog](https://www.rtl-sdr.com)** — Official guides & projects
-- **[Heavens-Above](https://www.heavens-above.com)** — Satellite pass predictions
-- **[RadioReference](https://radioreference.com)** — Frequency database
-- **[SDR++](https://github.com/AlexandreRouma/SDRPlusPlus)** — Receiver software
-- **[SatDump](https://github.com/SatDump/SatDump)** — Satellite decoder
-- **[ARISS](https://www.ariss.org/)** — ISS amateur radio info
+- [RTL-SDR Blog](https://www.rtl-sdr.com) — Official guides & projects
+- [Heavens-Above](https://www.heavens-above.com) — Satellite pass predictions
+- [RadioReference](https://radioreference.com) — Frequency database
+- [SDR++](https://github.com/AlexandreRouma/SDRPlusPlus) — Receiver software
+- [SatDump](https://github.com/SatDump/SatDump) — Satellite decoder
+- [ARISS](https://www.ariss.org/) — ISS amateur radio info
 
 ---
 
-## 📋 Next Steps
+## Next Steps
 
 1. **Read** `docs/ANTENNA_SETUP.md` (install drivers)
 2. **Assemble** antenna and connect hardware
@@ -168,7 +168,7 @@ python3 scripts/satellite_tracker.py
 
 ---
 
-## 💡 Tips
+## Tips
 
 - **Higher antenna = better range** (most important factor)
 - **Clear sky view = better signal** (for satellites)
@@ -178,9 +178,9 @@ python3 scripts/satellite_tracker.py
 
 ---
 
-## 🎉 Happy Exploring!
+## Happy Exploring
 
-You're about to join thousands of hobbyists discovering what's broadcasting all around you. 📡
+You're about to join thousands of hobbyists discovering what's broadcasting all around you.
 
 **Questions?** Check the project guide for your activity, or visit [RTL-SDR Blog](https://www.rtl-sdr.com) for community support.
 
