@@ -152,15 +152,18 @@ python3 satellite_tracker.py
 
 ## UK Frequency Spectrum (Ofcom UKFAT)
 
-See the complete UK radio frequency allocations below. These visualizations show where your RTL-SDR can listen across the spectrum.
+Visual guide to UK frequency allocations. Your RTL-SDR works best in VHF/UHF bands (88 MHz - 2.5 GHz).
 
-**Frequency Bands Overview:**
-![UK Frequency Spectrum](img/uk_spectrum_clean.png)
+**RTL-SDR Reception Bands:**
+![UK RTL-SDR Bands](img/uk_spectrum_clean.png)
 
 **Quick Reference Table:**
-![UK Frequency Reference](img/uk_frequency_reference.png)
+![UK Frequency Bands Reference](img/frequency_table.png)
 
-The spectrum covers everything from VLF maritime beacons (190 kHz) through FM radio, aviation bands, mobile networks, and up to satellite downlinks. Your RTL-SDR can receive most bands below 2 GHz, with strong performance in the VHF/UHF ranges.
+**Detailed Frequency View:**
+![RTL-SDR Common Bands](img/rtl_sdr_bands.png)
+
+Green = Good for RTL-SDR | Yellow = Limited Reception | Red = Not Suitable
 
 ---
 
