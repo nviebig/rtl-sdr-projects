@@ -35,10 +35,8 @@ Perfect for beginners and experienced radio enthusiasts interested in exploring 
 └── img/                               (Publication-quality Spectrum Visualizations)
     ├── uk_spectrum_viz.py            (Script to generate all plots)
     │
-    ├── spectrum_analysis/            (Comprehensive spectrum analysis plots)
-    │   ├── uk_spectrum_comprehensive.png (Complete spectrum, logarithmic scale)
-    │   ├── spectrum_by_service.png       (Organized by service category)
-    │   ├── spectrum_density.png          (Allocation density analysis)
+    ├── spectrum_analysis/            (Core spectrum analysis plots)
+    │   ├── spectrum_density.png          (Allocation density & distribution)
     │   └── color_palette_guide.png       (Service category color reference)
     │
     ├── rtl_sdr/                      (RTL-SDR specific visualizations)
@@ -163,40 +161,30 @@ python3 satellite_tracker.py
 
 ## UK Frequency Spectrum Visualizations (Ofcom UKFAT)
 
-### Complete Spectrum - Logarithmic Scale
-Shows all allocated UK frequency bands from 9 kHz to 12.5 GHz with logarithmic frequency axis for visibility across the entire spectrum.
-
-![UK Frequency Spectrum Comprehensive](img/spectrum_analysis/uk_spectrum_comprehensive.png)
-
-### Spectrum by Service Category
-Organizes frequency allocations by service type (Broadcasting, Mobile, Amateur Radio, Aviation, WiFi, Scientific, Satellite) to visualize usage patterns and allocation density.
-
-![Spectrum by Service Category](img/spectrum_analysis/spectrum_by_service.png)
-
-### Allocation Density Analysis
-Quantifies spectrum occupancy by frequency decade and service category, showing which bands are most densely allocated.
-
-![Spectrum Density Analysis](img/spectrum_analysis/spectrum_density.png)
-
 ### RTL-SDR Receivable Bands
 Highlights the 11 major frequency bands accessible with RTL-SDR dongle hardware, with color-coded service categories. Includes **NOAA weather satellite** (137–138 MHz) and **ISS reception** (145.8 MHz) bands.
 
 ![RTL-SDR Bands](img/rtl_sdr/rtl_sdr_bands.png)
 
 ### VHF/UHF Detailed View (Linear Scale)
-Shows narrow bands with linear frequency scale, revealing true bandwidth and spacing between allocations. Highlights NOAA weather satellite reception and ISS amateur radio band for real-world reception projects.
+Shows narrow bands with linear frequency scale, revealing true bandwidth and spacing between allocations. Highlights NOAA weather satellite reception and ISS amateur radio band for real-world reception projects. Essential for understanding narrow-band allocations (2m amateur, 70cm, 433 ISM).
 
 ![VHF/UHF Detail](img/rtl_sdr/vhf_uhf_detail.png)
+
+### Spectrum Allocation Density Analysis
+Quantifies spectrum occupancy by frequency decade (top) and service category (bottom), showing which bands are most densely allocated. Reveals that satellite and scientific bands occupy highest frequencies, while broadcasting dominates lower frequencies.
+
+![Spectrum Density Analysis](img/spectrum_analysis/spectrum_density.png)
+
+### Complete Reference Table
+Comprehensive lookup table with all frequency bands, bandwidth allocations, service categories, and RTL-SDR compatibility information.
+
+![Frequency Reference Table](img/reference/frequency_reference_table.png)
 
 ### Service Category Color Palette
 Reference guide for the consistent color scheme used across all visualizations.
 
 ![Color Palette Guide](img/spectrum_analysis/color_palette_guide.png)
-
-### Complete Reference Table
-Comprehensive table with all frequency bands, bandwidth allocations, service categories, and RTL-SDR compatibility.
-
-![Frequency Reference Table](img/reference/frequency_reference_table.png)
 
 ---
 
