@@ -32,10 +32,20 @@ Perfect for beginners and experienced radio enthusiasts interested in exploring 
 ├── hardware/                          (Hardware Reference)
 │   └── antenna-configurations.md     (Antenna optimization guide)
 │
-└── img/                               (Visualizations & diagrams)
-    ├── uk_spectrum_clean.png         (UK frequency spectrum visualization)
-    ├── uk_frequency_reference.png    (UK frequency bands reference table)
-    └── uk_spectrum_viz.py            (Script to generate plots)
+└── img/                               (Publication-quality Spectrum Visualizations)
+    ├── uk_spectrum_viz.py            (Script to generate all plots)
+    │
+    ├── spectrum_analysis/            (Comprehensive spectrum analysis plots)
+    │   ├── uk_spectrum_comprehensive.png (Complete spectrum, logarithmic scale)
+    │   ├── spectrum_by_service.png       (Organized by service category)
+    │   ├── spectrum_density.png          (Allocation density analysis)
+    │   └── color_palette_guide.png       (Service category color reference)
+    │
+    ├── rtl_sdr/                      (RTL-SDR specific visualizations)
+    │   └── rtl_sdr_bands.png         (Receivable frequency bands with hardware info)
+    │
+    └── reference/                    (Reference tables & lookups)
+        └── frequency_reference_table.png (Complete band reference table)
 ```
 
 ---
@@ -150,11 +160,37 @@ python3 satellite_tracker.py
 
 ---
 
-## UK Frequency Spectrum (Ofcom UKFAT)
+## UK Frequency Spectrum Visualizations (Ofcom UKFAT)
 
-![UK Frequency Spectrum](img/uk_spectrum_clean.png)
+### Complete Spectrum - Logarithmic Scale
+Shows all allocated UK frequency bands from 9 kHz to 12.5 GHz with logarithmic frequency axis for visibility across the entire spectrum.
 
-![UK Frequency Reference Table](img/frequency_table.png)
+![UK Frequency Spectrum Comprehensive](img/spectrum_analysis/uk_spectrum_comprehensive.png)
+
+### Spectrum by Service Category
+Organizes frequency allocations by service type (Broadcasting, Mobile, Amateur Radio, Aviation, WiFi, Scientific, Satellite) to visualize usage patterns and allocation density.
+
+![Spectrum by Service Category](img/spectrum_analysis/spectrum_by_service.png)
+
+### Allocation Density Analysis
+Quantifies spectrum occupancy by frequency decade and service category, showing which bands are most densely allocated.
+
+![Spectrum Density Analysis](img/spectrum_analysis/spectrum_density.png)
+
+### RTL-SDR Receivable Bands
+Highlights the 9 major frequency bands accessible with RTL-SDR dongle hardware, with color-coded service categories.
+
+![RTL-SDR Bands](img/rtl_sdr/rtl_sdr_bands.png)
+
+### Service Category Color Palette
+Reference guide for the consistent color scheme used across all visualizations.
+
+![Color Palette Guide](img/spectrum_analysis/color_palette_guide.png)
+
+### Complete Reference Table
+Comprehensive table with all frequency bands, bandwidth allocations, service categories, and RTL-SDR compatibility.
+
+![Frequency Reference Table](img/reference/frequency_reference_table.png)
 
 ---
 
