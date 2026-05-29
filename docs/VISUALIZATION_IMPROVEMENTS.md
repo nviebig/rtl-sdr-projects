@@ -21,17 +21,22 @@ The UK spectrum visualization suite has been comprehensively redesigned to meet 
 ❌ No grouping by service category  
 ❌ No quantitative analysis (density, allocation distribution)  
 ❌ No dedicated legend or palette guide  
+❌ Narrow bands invisible in logarithmic scale  
+❌ Missing satellite reception bands (NOAA, ISS)  
 ❌ 150 DPI resolution (adequate but not publication-quality)  
 
 ### After (New Suite)
-✅ 6 complementary scientific plots  
+✅ 7 complementary scientific plots  
 ✅ Unified color palette across all visualizations  
 ✅ Professional typography and consistent styling  
 ✅ Service-category grouping shows allocation patterns  
 ✅ Quantitative analysis of spectrum density and allocation  
+✅ **Dedicated VHF/UHF detail plot with linear scale** (shows narrow bands)  
+✅ **Includes NOAA weather satellite (137–138 MHz) reception band** ⭐  
+✅ **Includes ISS astronaut voice (145.8 MHz) reception band** ⭐  
 ✅ Dedicated color palette reference guide  
 ✅ 300 DPI resolution (publication-ready)  
-✅ Comprehensive documentation (3 guide documents)  
+✅ Comprehensive documentation (4 guide documents)  
 
 ---
 
@@ -85,11 +90,31 @@ The UK spectrum visualization suite has been comprehensively redesigned to meet 
 - Added service category legend (color-coded)
 - Cleaner layout with frequency range labels
 - Better visual distinction between band types
-- Shows 9 accessible bands with hardware capability info
+- Shows 11 accessible bands with hardware capability info
+- **NEW:** Includes NOAA weather satellite (137–138 MHz) and ISS (145.8 MHz) reception bands
 
 **Use:** Project planning, antenna design, hardware capability reference
 
-### 5. Complete Reference Table
+### 5. VHF/UHF Detailed Regional View (Linear Scale) ⭐ NEW
+**File:** `vhf_uhf_detail.png`
+
+**Key Feature:** Linear frequency scale shows narrow bands that vanish in logarithmic plots. Reveals true bandwidth and spacing between allocations.
+
+**Why This Matters:**
+- Logarithmic scale compresses 2 MHz bands (like 2m amateur) into invisibility
+- Linear scale shows: precise frequencies, gaps between bands, narrow ISM allocations
+- Annotated with NOAA and ISS reception points
+
+**Narrow Bands Now Visible:**
+- 2m Amateur (144–146 MHz, 2 MHz wide)
+- ISS (145.8 MHz exactly)
+- NOAA Satellites (137–138 MHz)
+- 433 ISM (433–435 MHz, only 2 MHz)
+- 70cm Amateur (430–440 MHz)
+
+**Use:** Understanding true spectrum structure, narrow-band project planning, realistic expectations
+
+### 6. Complete Reference Table
 **File:** `frequency_reference_table.png`
 
 **Improvements:**
@@ -120,7 +145,7 @@ The UK spectrum visualization suite has been comprehensively redesigned to meet 
 ✅ **7 distinct service categories** each with unique, professional color  
 ✅ **High contrast** (white text on colored backgrounds, WCAG AA compliant)  
 ✅ **Colorblind-friendly** (tested against deuteranopia and protanopia)  
-✅ **Consistent mapping** across all 6 plots  
+✅ **Consistent mapping** across all 7 plots  
 ✅ **Logical grouping** (related services have related hues)  
 ✅ **Professional appearance** suitable for academic/technical contexts  
 
@@ -159,6 +184,12 @@ The UK spectrum visualization suite has been comprehensively redesigned to meet 
    - Summary of changes
    - Detailed feature list
    - Before/after comparison
+
+4. **`SATELLITE_RECEPTION_GUIDE.md`** (NEW - Satellite Reception Projects)
+   - NOAA weather satellite reception guide
+   - ISS astronaut voice reception
+   - Iridium satellite detection
+   - Hardware requirements and tips
 
 ### Updated Documents
 
@@ -277,12 +308,13 @@ The UK spectrum visualization suite has been comprehensively redesigned to meet 
 - `img/uk_spectrum_viz.py` (updated, ~550 lines)
 
 ### Generated Plots (300 DPI PNG)
-- `img/uk_spectrum_comprehensive.png` (194 KB)
-- `img/spectrum_by_service.png` (261 KB)
-- `img/spectrum_density.png` (338 KB)
-- `img/rtl_sdr_bands.png` (263 KB)
-- `img/frequency_reference_table.png` (529 KB)
-- `img/color_palette_guide.png` (362 KB)
+- `img/spectrum_analysis/uk_spectrum_comprehensive.png` (194 KB)
+- `img/spectrum_analysis/spectrum_by_service.png` (261 KB)
+- `img/spectrum_analysis/spectrum_density.png` (338 KB)
+- `img/rtl_sdr/rtl_sdr_bands.png` (275 KB)
+- `img/rtl_sdr/vhf_uhf_detail.png` (303 KB) ⭐ NEW
+- `img/reference/frequency_reference_table.png` (529 KB)
+- `img/spectrum_analysis/color_palette_guide.png` (362 KB)
 
 ### Documentation
 - `docs/VISUALIZATION_GUIDE.md` (comprehensive reference, ~500 lines)
@@ -292,9 +324,9 @@ The UK spectrum visualization suite has been comprehensively redesigned to meet 
 
 ### Total Size
 - **Scripts:** ~550 KB (single Python file)
-- **Visualizations:** ~1.9 MB (6 PNG files)
-- **Documentation:** ~100 KB (3 Markdown files)
-- **Total:** ~2.5 MB (reasonable for GitHub)
+- **Visualizations:** ~2.2 MB (7 PNG files)
+- **Documentation:** ~300 KB (4 Markdown files)
+- **Total:** ~3.0 MB (reasonable for GitHub)
 
 ---
 

@@ -42,7 +42,8 @@ Perfect for beginners and experienced radio enthusiasts interested in exploring 
     │   └── color_palette_guide.png       (Service category color reference)
     │
     ├── rtl_sdr/                      (RTL-SDR specific visualizations)
-    │   └── rtl_sdr_bands.png         (Receivable frequency bands with hardware info)
+    │   ├── rtl_sdr_bands.png         (Receivable frequency bands with hardware info)
+    │   └── vhf_uhf_detail.png        (Linear-scale detail view showing narrow bands)
     │
     └── reference/                    (Reference tables & lookups)
         └── frequency_reference_table.png (Complete band reference table)
@@ -178,9 +179,14 @@ Quantifies spectrum occupancy by frequency decade and service category, showing 
 ![Spectrum Density Analysis](img/spectrum_analysis/spectrum_density.png)
 
 ### RTL-SDR Receivable Bands
-Highlights the 9 major frequency bands accessible with RTL-SDR dongle hardware, with color-coded service categories.
+Highlights the 11 major frequency bands accessible with RTL-SDR dongle hardware, with color-coded service categories. Includes **NOAA weather satellite** (137–138 MHz) and **ISS reception** (145.8 MHz) bands.
 
 ![RTL-SDR Bands](img/rtl_sdr/rtl_sdr_bands.png)
+
+### VHF/UHF Detailed View (Linear Scale)
+Shows narrow bands with linear frequency scale, revealing true bandwidth and spacing between allocations. Highlights NOAA weather satellite reception and ISS amateur radio band for real-world reception projects.
+
+![VHF/UHF Detail](img/rtl_sdr/vhf_uhf_detail.png)
 
 ### Service Category Color Palette
 Reference guide for the consistent color scheme used across all visualizations.

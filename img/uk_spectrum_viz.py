@@ -104,13 +104,27 @@ SPECTRUM_DATA = [
 RTL_SDR_DATA = [
     ("FM Radio", 88, 108, BAND_COLORS["FM Radio"], "Broadcasting & Media"),
     ("Aviation", 108, 137, BAND_COLORS["Aviation"], "Aviation & Maritime"),
+    ("NOAA Satellite", 137, 138, "#16a085", "Satellite"),
     ("2m Amateur", 144, 146, BAND_COLORS["2m Amateur"], "Amateur Radio"),
+    ("ISS/Amateur", 145, 146, "#16a085", "Satellite"),
     ("433 ISM", 433, 435, BAND_COLORS["433 ISM"], "WiFi & ISM"),
     ("70cm Amateur", 430, 440, BAND_COLORS["70cm Amateur"], "Amateur Radio"),
     ("UHF TV", 470, 694, BAND_COLORS["Digital TV"], "Broadcasting & Media"),
     ("GSM-900", 890, 960, BAND_COLORS["GSM-900"], "Mobile Communications"),
     ("GSM-1800", 1710, 1880, BAND_COLORS["GSM-1800"], "Mobile Communications"),
     ("WiFi 2.4GHz", 2400, 2500, BAND_COLORS["WiFi 2.4GHz"], "WiFi & ISM"),
+]
+
+VHF_UHF_DETAIL_DATA = [
+    ("FM Radio", 88, 108, BAND_COLORS["FM Radio"]),
+    ("Aviation\nVHF", 108, 137, BAND_COLORS["Aviation"]),
+    ("NOAA\nSatellite", 137, 138, "#16a085"),
+    ("2m\nAmateur", 144, 146, BAND_COLORS["2m Amateur"]),
+    ("ISS\n145.8 MHz", 145.7, 146, "#16a085"),
+    ("433\nISM", 433, 435, BAND_COLORS["433 ISM"]),
+    ("70cm\nAmateur", 430, 440, BAND_COLORS["70cm Amateur"]),
+    ("UHF TV", 470, 694, BAND_COLORS["Digital TV"]),
+    ("GSM-900", 890, 960, BAND_COLORS["GSM-900"]),
 ]
 
 # ============================================================================
@@ -443,7 +457,73 @@ print("✓ Saved: rtl_sdr/rtl_sdr_bands.png (300 DPI)")
 plt.close()
 
 # ============================================================================
-# PLOT 5: Reference Table with Service Category Coloring
+# PLOT 5: VHF/UHF Detailed Regional View (Linear Scale)
+# ============================================================================
+fig, ax = plt.subplots(figsize=(16, 9))
+
+for i, (name, freq_min, freq_max, color) in enumerate(VHF_UHF_DETAIL_DATA):
+    y_pos = len(VHF_UHF_DETAIL_DATA) - i - 1
+    width = freq_max - freq_min
+
+    rect = FancyBboxPatch(
+        (freq_min, y_pos - 0.3), width, 0.6,
+        boxstyle="round,pad=0.01",
+        facecolor=color,
+        edgecolor='#1a1a1a',
+        linewidth=1.5,
+        alpha=0.85
+    )
+    ax.add_patch(rect)
+
+    mid = freq_min + width / 2
+    ax.text(mid, y_pos, name,
+           ha='center', va='center',
+           fontsize=9.5, weight='bold',
+           color='white',
+           family='sans-serif')
+
+    # Add frequency markers
+    ax.text(freq_min, y_pos - 0.55, f'{freq_min:.0f}',
+           ha='center', va='top', fontsize=7, color='#666666')
+    ax.text(freq_max, y_pos - 0.55, f'{freq_max:.0f}',
+           ha='center', va='top', fontsize=7, color='#666666')
+
+# Add narrow band annotations
+ax.text(137.5, 8.5, '← NOAA receives here\n(weather satellites)',
+       fontsize=9, ha='left', style='italic', color='#16a085', weight='bold')
+ax.text(145.8, 7.5, '← ISS at 145.800 MHz\n(astronaut voice)',
+       fontsize=9, ha='left', style='italic', color='#16a085', weight='bold')
+
+ax.set_xlim(85, 1000)
+ax.set_ylim(-1, len(VHF_UHF_DETAIL_DATA))
+
+# Detailed x-axis ticks
+ax.set_xticks([88, 108, 137, 144, 145.8, 156, 433, 470, 890])
+ax.set_xticklabels(['88\nFM', '108\nAVN', '137\nNOAA', '144\n2m', '145.8\nISS',
+                    '156\nMAR', '433\nISM', '470\nTV', '890\nGSM'],
+                   fontsize=8, weight='bold')
+
+ax.set_yticks([])
+
+ax.set_xlabel('Frequency (MHz) - Linear Scale', **FONT_LABEL, labelpad=12)
+ax.set_title('VHF/UHF Detailed View - Narrow Bands Visible\nLinear scale reveals bandwidth and spacing between allocations',
+            **FONT_TITLE, pad=18)
+
+style_axis_clean(ax, grid_axis='x')
+
+# Add vertical reference lines for important narrow bands
+ax.axvline(x=137.5, color='#16a085', linestyle=':', linewidth=1, alpha=0.3)
+ax.axvline(x=145.8, color='#16a085', linestyle=':', linewidth=1, alpha=0.3)
+ax.axvline(x=433.5, color='#27ae60', linestyle=':', linewidth=1, alpha=0.3)
+
+plt.tight_layout()
+plt.savefig('/Users/niklasviebig/coding_projects/rtl_sdr_projects/img/rtl_sdr/vhf_uhf_detail.png',
+           dpi=300, bbox_inches='tight', facecolor='white', edgecolor='none')
+print("✓ Saved: rtl_sdr/vhf_uhf_detail.png (300 DPI)")
+plt.close()
+
+# ============================================================================
+# PLOT 6: Reference Table with Service Category Coloring
 # ============================================================================
 fig, ax = plt.subplots(figsize=(16, 11))
 
@@ -539,7 +619,7 @@ print("✓ Saved: reference/frequency_reference_table.png (300 DPI)")
 plt.close()
 
 # ============================================================================
-# PLOT 6: Color Palette Legend & Service Guide
+# PLOT 7: Color Palette Legend & Service Guide
 # ============================================================================
 fig, ax = plt.subplots(figsize=(14, 10))
 
@@ -621,7 +701,9 @@ rtl_total = sum(freq_max - freq_min for _, freq_min, freq_max, _, _ in RTL_SDR_D
 print(f"RTL-SDR coverage: {rtl_total/1e6:.1f} MHz total bandwidth")
 
 print("\n" + "="*70)
-print("✓ All plots generated at 300 DPI (publication quality)")
+print("✓ 7 plots generated at 300 DPI (publication quality)")
+print("✓ Includes NOAA weather satellite and ISS reception bands")
+print("✓ VHF/UHF detail plot shows narrow bands with linear scale")
 print("✓ Color palette consistent across all visualizations")
 print("✓ Ready for inclusion in documentation and presentations")
 print("="*70 + "\n")
